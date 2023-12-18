@@ -1,0 +1,26 @@
+<div>
+  <h2>Customer Details</h2>
+  <table *ngIf="customer$ | async as customer">
+    <tr>
+      <th>Email</th>
+      <td>{{ customer.email }}</td>
+    </tr>
+    <tr>
+      <th>Phone</th>
+      <td>{{ customer.phone }}</td>
+    </tr>
+    <tr>
+      <th>Address</th>
+      <td>{{ customer.add }}</td>
+    </tr>
+    <tr>
+      <th>Street</th>
+      <td>{{ customer.location.street }}</td>
+    </tr>
+    <tr>
+      <th>Zip</th>
+      <td>{{ customer.location.zip }}</td>
+    </tr>
+  </table>
+  <button (click)="navigateBack()">close</button>
+</div>
