@@ -25,40 +25,32 @@
       }
     },
     {
-      "id": 3,
-      "name": "Bob Johnson",
-      "email": "bob@example.com",
-      "phone": 5551112222,
-      "add": "789 Oak St",
+      "name": "abhishek",
+      "email": "abhi@gmail.com",
+      "phone": "7894561235",
+      "add": "Anytown",
       "location": {
-        "street": "Oak St",
-        "city": "Otherstown",
-        "zip": 67890
-      }
+        "street": "sg",
+        "city": "ahm",
+        "zip": "7945"
+      },
+      "id": 3
     },
     {
+      "name": "ffffffffffff",
+      "email": "fffffffffffffffffffff",
+      "phone": "fffffffffff",
+      "add": "sd",
+      "location": {
+        "street": "sad",
+        "city": "sd",
+        "zip": "sda"
+      },
       "id": 4,
-      "name": "Emily Brown",
-      "email": "emily@example.com",
-      "phone": 3334445555,
-      "add": "101 Pine St",
-      "location": {
-        "street": "Pine St",
-        "city": "Neighborhood",
-        "zip": 24680
-      }
-    },
-    {
-      "id": 5,
-      "name": "David Lee",
-      "email": "david@example.com",
-      "phone": 7778889999,
-      "add": "210 Cedar St",
-      "location": {
-        "street": "Cedar St",
-        "city": "Villagetown",
-        "zip": 13579
-      }
+      "city": "ffffffffffffffff",
+      "Street": "fffffff",
+      "zip": "ffffffffff",
+      "address": "fffffffffff"
     }
   ]
 }

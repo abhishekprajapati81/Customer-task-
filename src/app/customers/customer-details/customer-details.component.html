@@ -20,7 +20,10 @@
     <tr>
       <th>Zip</th>
       <td>{{ customer.location.zip }}</td>
+      <button (click)="onDelete(customer.id ?? 0)">delete</button>
     </tr>
+    <button [routerLink]="['custedit', customer.id ?? 0]">Edit customer</button>
+    <router-outlet></router-outlet>
   </table>
   <button (click)="navigateBack()">close</button>
 </div>

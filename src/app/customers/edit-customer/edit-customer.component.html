@@ -1,0 +1,28 @@
+<form [formGroup]="editCustomerForm">
+  <label>Name</label>
+  <input type="text" formControlName="name" placeholder="name" />
+  <br />
+  <label>Email</label>
+  <input type="text" formControlName="email" placeholder="email" />
+  <br />
+  <label>Phone</label>
+  <input type="text" formControlName="phone" placeholder="phone" />
+  <br />
+  <label>Location</label>
+  <input type="text" formControlName="city" placeholder="location" />
+  <br />
+  <label>address</label>
+  <input type="text" formControlName="address" placeholder="address" />
+  <br />
+  <label>Street</label>
+  <input type="text" formControlName="Street" placeholder="Street" />
+  <br />
+  <label>zip</label>
+  <input type="text" formControlName="zip" placeholder="zip" />
+  <br />
+  <button
+    (click)="updateCustomer(editCustomerForm.value.id, editCustomerForm.value)"
+  >
+    updateCustomer
+  </button>
+</form>

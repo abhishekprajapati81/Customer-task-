@@ -10,11 +10,21 @@ import { EffectsModule } from '@ngrx/effects';
 import { CustomerEffects } from './store/customer.effect';
 import { CustomerFacade } from './store/customer.facade';
 import { CustomerDetailsComponent } from './customers/customer-details/customer-details.component';
+import { AddCustomerComponent } from './customers/add-customer/add-customer.component';
+import { EditCustomerComponent } from './customers/edit-customer/edit-customer.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, CustomerComponent, CustomerDetailsComponent],
+  declarations: [
+    AppComponent,
+    CustomerComponent,
+    CustomerDetailsComponent,
+    AddCustomerComponent,
+    EditCustomerComponent,
+  ],
   imports: [
     HttpClientModule,
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({ Customer: customerReducer }),

@@ -21,4 +21,46 @@ export class CustomerEffects {
       )
     )
   );
+
+  addcustomer$ = createEffect(() =>
+    this.action$.pipe(
+      ofType(CustomerActions.addCustomer),
+      mergeMap((action) =>
+        this._httpService
+          .addNewCustomer(action.customer)
+          .pipe(
+            map((customer) => CustomerActions.addnewcustomersucc({ customer }))
+          )
+      )
+    )
+  );
+
+  deletecustomer$ = createEffect(() =>
+    this.action$.pipe(
+      ofType(CustomerActions.deleteCustomer),
+      mergeMap((action) =>
+        this._httpService
+          .deleteCustomer(action.id)
+          .pipe(
+            map(() => CustomerActions.deleteCustomerSuccess({ id: action.id }))
+          )
+      )
+    )
+  );
+
+  editCustomer$ = createEffect(() =>
+    this.action$.pipe(
+      ofType(CustomerActions.updateCustomer),
+      mergeMap((action) =>
+        this._httpService.updateCustomer(action.id, action.Customeredit).pipe(
+          map((Customeredit) =>
+            CustomerActions.updateCustomerSeccess({
+              id: action.id,
+              Customeredit,
+            })
+          )
+        )
+      )
+    )
+  );
 }

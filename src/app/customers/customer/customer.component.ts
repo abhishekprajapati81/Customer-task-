@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { CustomerFacade } from 'src/app/store/customer.facade';
 
@@ -8,7 +8,7 @@ import { CustomerFacade } from 'src/app/store/customer.facade';
   styleUrls: ['./customer.component.css'],
 })
 export class CustomerComponent implements OnInit {
-  constructor(public customerFacade: CustomerFacade, private router: Router) {}
+  customerFacade = inject(CustomerFacade);
 
   ngOnInit(): void {
     this.customerFacade.getAllCustomer();
